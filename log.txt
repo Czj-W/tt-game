@@ -1,0 +1,36 @@
+{
+    "您需要额外关注的转化日志信息": {},
+    "其他常规转化日志信息": {
+        "0": {
+            "time": "2020-07-19T08:01:27.888Z",
+            "type": "stdOut",
+            "message": "🎊    Congratulations, transform done! Please check transform log in"
+        },
+        "1": {
+            "time": "2020-07-19T08:01:27.888Z",
+            "type": "stdOut",
+            "message": "📝    D:\\工作\\work\\test-douyin\\log.txt"
+        },
+        "2": {
+            "time": "2020-07-19T08:01:27.218Z",
+            "type": "transform wxss file suffix",
+            "file": "index\\index.wxss",
+            "message": "转换了样式文件后缀, wxss ==> ttss"
+        },
+        "3": {
+            "time": "2020-07-19T08:01:27.643Z",
+            "type": "stdOut",
+            "message": "🍻    Successfully transform js file"
+        },
+        "4": {
+            "time": "2020-07-19T08:01:27.656Z",
+            "type": "stdOut",
+            "message": "🍻    Successfully transform wxml file"
+        },
+        "5": {
+            "time": "2020-07-19T08:01:27.663Z",
+            "type": "stdOut",
+            "message": "🍻    Successfully transform wxss file"
+        }
+    }
+}

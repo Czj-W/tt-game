@@ -1,0 +1,163 @@
+page {
+  width: 750rpx;
+  height: 100%; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding-top: 139rpx;
+  background-image: url("http://xcx-front-p-assets.airhotels.cn/images/distribution/index-bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat; }
+  .container .logo {
+    width: 289rpx;
+    height: 135rpx;
+    margin: 0 auto;
+    background-image: url("http://xcx-front-p-assets.airhotels.cn/images/distribution/index-logo.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 20rpx; }
+  .container .hello {
+    color: #8a5c30;
+    width: 224rpx;
+    height: 96rpx;
+    line-height: 96rpx;
+    text-align: center;
+    font-size: 30rpx;
+    margin: 0 auto;
+    font-weight: 400;
+    margin-bottom: 46rpx; }
+  .container .logo-box {
+    width: 610rpx;
+    height: 572rpx;
+    border-radius: 22rpx;
+    margin: 0 auto;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
+    padding: 0 50rpx;
+    padding-top: 112rpx;
+    box-sizing: border-box;
+    margin-bottom: 335rpx; }
+    .container .logo-box .telephone,
+    .container .logo-box .yz-code {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 72rpx; }
+      .container .logo-box .telephone .telephone-image,
+      .container .logo-box .telephone .yz-code-image,
+      .container .logo-box .yz-code .telephone-image,
+      .container .logo-box .yz-code .yz-code-image {
+        width: 50rpx;
+        height: 50rpx;
+        background: url("http://xcx-front-p-assets.airhotels.cn/images/distribution/index-phone.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat; }
+      .container .logo-box .telephone .yz-code-image,
+      .container .logo-box .yz-code .yz-code-image {
+        background: url("http://xcx-front-p-assets.airhotels.cn/images/distribution/index-queren.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat; }
+      .container .logo-box .telephone .telephone-input,
+      .container .logo-box .telephone .yz-code-input,
+      .container .logo-box .yz-code .telephone-input,
+      .container .logo-box .yz-code .yz-code-input {
+        width: 427rpx;
+        height: 50rpx;
+        border-bottom: 1px solid #5b504e;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative; }
+        .container .logo-box .telephone .telephone-input > text,
+        .container .logo-box .telephone .yz-code-input > text,
+        .container .logo-box .yz-code .telephone-input > text,
+        .container .logo-box .yz-code .yz-code-input > text {
+          font-size: 22rpx;
+          color: #241a18;
+          width: 140rpx;
+          text-align: right; }
+        .container .logo-box .telephone .telephone-input .error,
+        .container .logo-box .telephone .yz-code-input .error,
+        .container .logo-box .yz-code .telephone-input .error,
+        .container .logo-box .yz-code .yz-code-input .error {
+          position: absolute;
+          bottom: -48rpx;
+          left: 0;
+          color: #241a18;
+          font-size: 22rpx; }
+    .container .logo-box .yz-code {
+      margin-bottom: 122rpx; }
+    .container .logo-box .btn {
+      width: 510rpx;
+      height: 82rpx;
+      background: linear-gradient(133deg, #fff6dd 0%, #ffe9ac 100%);
+      box-shadow: 0px 5px 10px 0px rgba(189, 155, 99, 0.3);
+      border-radius: 41px;
+      font-size: 32rpx;
+      font-weight: 500;
+      color: #755b3f;
+      margin: 0 auto;
+      line-height: 82rpx; }
+    .container .logo-box button::after {
+      border: none; }
+  .container .airhotel {
+    width: 100%;
+    text-align: center;
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular,PingFangSC;
+    font-weight: 400;
+    color: #fff2d1;
+    line-height: 33rpx;
+    letter-spacing: 4rpx; }
+  .container .bullet-box {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(33, 34, 36, 0.6); }
+    .container .bullet-box .username-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -298rpx;
+      margin-left: -261rpx;
+      width: 522rpx;
+      height: 496rpx;
+      background: white;
+      border-radius: 14px;
+      padding-top: 126rpx;
+      box-sizing: border-box; }
+      .container .bullet-box .username-box .input-name {
+        font-size: 28rpx;
+        font-weight: 500;
+        color: #755b3f;
+        height: 40rpx;
+        line-height: 40rpx;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 4px;
+        margin-bottom: 65rpx; }
+      .container .bullet-box .username-box .input {
+        width: 375rpx;
+        height: 50rpx;
+        border-bottom: 1px solid #979797;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-bottom: 88rpx; }
+      .container .bullet-box .username-box .sure-btn {
+        width: 230rpx;
+        height: 80rpx;
+        background: linear-gradient(133deg, #fff6dd 0%, #ffe9ac 100%);
+        box-shadow: 0px 5rpx 10rpx 0px rgba(189, 155, 99, 0.3);
+        border-radius: 40rpx;
+        line-height: 80rpx;
+        font-size: 32rpx;
+        color: #755b3f;
+        font-weight: 500;
+        letter-spacing: 3rpx; }
+      .container .bullet-box .username-box button::after {
+        border: none; }

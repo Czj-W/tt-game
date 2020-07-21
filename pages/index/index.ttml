@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="logo"></view>
+  <view class="hello">你好，请登录！</view>
+  <view class="logo-box">
+    <view class="telephone">
+      <view class="telephone-image"></view>
+      <view class="telephone-input">
+        <input type="digit" placeholder="请输入手机号码" placeholder-style="color:rgb(91, 80, 78)" />
+      </view>
+    </view>
+      <view class="yz-code">
+      <view class="yz-code-image"></view>
+      <view class="yz-code-input">
+        <input type="digit" placeholder="请输入短信验证码" placeholder-style="color:rgb(91, 80, 78)" />
+        <!-- <text>获取验证码</text> -->
+        <text>重新发送(30)</text>
+        <view class="error">验证码错误</view>
+      </view>
+    </view>
+    <button class="btn">登 录</button>
+  </view>
+  <view class="airhotel">首旅如家·airhotel多元化酒店预订平台</view>
+  <view class="bullet-box">
+    <view class="username-box">
+      <view class="input-name">请输入姓名</view>
+      <view class="input">
+        <input type="text" />
+      </view>
+      <button class="sure-btn">确定</button>
+    </view>
+  </view>
+</view>
