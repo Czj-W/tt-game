@@ -1,13 +1,38 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/index/index",
+    "pages/classify/index",
+    "pages/user/index"
   ],
   "window":{
-    "navigationBarTitleText": "AirHotel",
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTextStyle":"black",
-    "backgroundColor": "#eeeeee",
-    "allowsBounceVertical": "NO"
-  }
+    "navigationBarTitleText": "game",
+    "navigationBarTextStyle":"black"
+  },
+	"tabBar": {
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "./images/tabbar_new.png",
+				"selectedIconPath": "./images/tabbar_new_active.png"
+			},
+			{
+				"pagePath": "pages/classify/index",
+				"text": "分类",
+				"iconPath": "./images/tabbar_home.png",
+				"selectedIconPath": "./images/tabbar_home_active.png"
+			},
+			{
+				"pagePath": "pages/user/index",
+				"text": "我的",
+				"iconPath": "./images/tabbar_my.png",
+				"selectedIconPath": "./images/tabbar_my_active.png"
+			}
+		],
+		"backgroundColor": "#fff",
+    "selectedColor": "#CEB68A",
+    "borderStyle":"white"
+	}
 }

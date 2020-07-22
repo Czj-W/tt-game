@@ -1,22 +1,80 @@
-view, scroll-view, navigator, swiper, picker, input {
-  box-sizing: border-box; }
 
-button {
-  line-height: normal; }
+view, scroll-view, navigator, swiper, picker, input{
+  box-sizing: border-box;
+}
+view::hover{
 
-scroll-view {
-  width: auto; }
-
-form, picker {
-  display: block; }
-
-page {
-  background-color: #fff; }
-
-input {
+}
+button{
+  margin: 0;
   padding: 0;
+  line-height: normal;
+}
+button::after {
+  display: none;
+}
+scroll-view{
+  width: auto;
+}
+form, picker{
   display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: clip;
-  background-color: transparent; }
+}
+
+page{
+  background-color: #fff;
+}
+input{
+  padding: 0;
+  display:block;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:clip;
+  background-color: transparent;
+}
+
+
+view, scroll-view, navigator, swiper, picker, input{
+  box-sizing: border-box;
+}
+view::hover{
+
+}
+button{
+  line-height: normal;
+}
+scroll-view{
+  width: auto;
+}
+form, picker{
+  display: block;
+}
+
+page{
+  background-color: #fff;
+}
+input{
+  padding: 0;
+  display:block;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:clip;
+  background-color: transparent;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.inline{
+  display: inline-block;
+}
+.flex-blank{
+  flex: 1;
+}

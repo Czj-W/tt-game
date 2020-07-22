@@ -1,24 +1,22 @@
-webpackJsonp([2], {
-  27: function (a, b, c) {
-    "use strict";
+const app = getApp()
 
-    var d = c(3),
-        e = d.connector.connectPage({
-      env: function (a) {
-        return a.env;
-      },
-      count: function (a) {
-        return a.count.count;
-      }
-    })({
-      data: {
-        inputValue: 1
-      }
-    });
-    Page(e);
-  }
-}, [27]);
+Page({
+  data: {
+    classifyList: [
+      { icon: 'https://img-gewu.jifenone.com/images/cart.png', name: '游戏' },
+      { icon: 'https://img-gewu.jifenone.com/images/cart.png', name: '情感' },
+      { icon: 'https://img-gewu.jifenone.com/images/cart.png', name: '性格' },
+      { icon: 'https://img-gewu.jifenone.com/images/cart.png', name: '智商' },
+      {icon:'https://img-gewu.jifenone.com/images/cart.png',name:'职场'},
+    ],
+    titleList: [
+      { img: 'https://img-gewu.jifenone.com/images/bg-pro.png', title: '你的情商有多高', num: '22223',msg:'智能代理：意思就是说，中国的网站不走我们的代理，国外的网站走代理，' },
+      { img: 'https://img-gewu.jifenone.com/images/bg-pro.png', title: '你的情商有多高', num: '22223',msg:'智能代理：意思就是说，中国的网站不走我们的代理，国外的网站走代理，' },
+      { img: 'https://img-gewu.jifenone.com/images/bg-pro.png', title: '你的情商有多高', num: '22223', msg: '智能代理：意思就是说，中国的网站不走我们的代理，国外的网站走代理，' },
 
-function webpackJsonp() {
-  require("./../../common.js"), tt.webpackJsonp.apply(null, arguments);
-}
+    ]
+  },
+  onLoad: function () {
+    console.log('Welcome to Mini Code')
+  },
+})

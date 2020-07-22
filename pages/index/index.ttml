@@ -1,32 +1,83 @@
-<view class="container">
-  <view class="logo"></view>
-  <view class="hello">你好，请登录！</view>
-  <view class="logo-box">
-    <view class="telephone">
-      <view class="telephone-image"></view>
-      <view class="telephone-input">
-        <input type="digit" placeholder="请输入手机号码" placeholder-style="color:rgb(91, 80, 78)" />
+<view class="index">
+  <swiper indicator-dots indicator-dots="{{false}}" indicator-active-color="rgba(206,182,138,1)" autoplay="{{true}}" interval="{{5000}}">
+    <swiper-item>
+      <image src="https://img-gewu.jifenone.com/images/bg-pro.png" class="slide-image" />
+    </swiper-item>
+    <swiper-item>
+      <image src="https://img-gewu.jifenone.com/images/bg-pro.png" class="slide-image" />
+    </swiper-item>
+    <swiper-item>
+      <image src="https://img-gewu.jifenone.com/images/bg-pro.png" class="slide-image" />
+    </swiper-item>
+  </swiper>
+  <view class="classify">
+    <block tt:for="{{classifyList}}">
+      <view class="con">
+        <image class="con-img" src="{{item.icon}}" mode="aspectFit" />
+        <view class="txt">{{item.name}}</view>
       </view>
-    </view>
-      <view class="yz-code">
-      <view class="yz-code-image"></view>
-      <view class="yz-code-input">
-        <input type="digit" placeholder="请输入短信验证码" placeholder-style="color:rgb(91, 80, 78)" />
-        <!-- <text>获取验证码</text> -->
-        <text>重新发送(30)</text>
-        <view class="error">验证码错误</view>
-      </view>
-    </view>
-    <button class="btn">登 录</button>
+    </block>
   </view>
-  <view class="airhotel">首旅如家·airhotel多元化酒店预订平台</view>
-  <view class="bullet-box">
-    <view class="username-box">
-      <view class="input-name">请输入姓名</view>
-      <view class="input">
-        <input type="text" />
+  <view class="selected">
+    <view class="selected-header">
+      <view class="txt-box">
+        <view class="today">今日精选</view>
+        <view class="play">本小程序仅供娱乐</view>
       </view>
-      <button class="sure-btn">确定</button>
+      <view class="search-box">
+        <view class="icon"></view>
+        <view class="txt">点击搜索</view>
+      </view>
     </view>
+    <scroll-view scroll-x="true" class="scroll-view">
+      <view class="con">
+        <block tt:for="{{titleList}}">
+          <view class="con-jump">
+            <image src="{{item.img}}" mode="aspectFill" />
+            <view class="info">
+              <view class="title">{{item.title}}</view>
+              <view class="hot">
+                <view class="icon"></view>
+                <view class="num">{{item.num}}人已测</view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="con">
+        <block tt:for="{{titleList}}">
+          <view class="con-jump">
+            <image src="{{item.img}}" mode="aspectFill" />
+            <view class="info">
+              <view class="title">{{item.title}}</view>
+              <view class="hot">
+                <view class="icon"></view>
+                <view class="num">{{item.num}}人已测</view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="recommend">
+    <view class="txt">推荐测评></view>
+    <view class="txt1">仅供娱乐</view>
+  </view>
+  <view class="testList">
+    <block tt:for="{{titleList}}">
+      <view class="con">
+        <image src="{{item.img}}" mode="aspectFill" />
+        <view class="info">
+          <view class="title">{{item.title}}</view>
+          <view class="msg">{{item.msg}}</view>
+          <view class="hot">
+            <view class="icon"></view>
+            <view class="num">{{item.num}}人已测</view>
+          </view>
+          <view class="btn">立即测试</view>
+        </view>
+      </view>
+    </block>
   </view>
 </view>

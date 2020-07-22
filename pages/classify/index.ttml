@@ -1,0 +1,34 @@
+<view class="index">
+  <view class="left">
+    <scroll-view scroll-y="true" class="scroll-view">
+      <block tt:for="{{classifyList}}">
+        <view class="classify {{active===index?'active':''}}" bindtap="handleClassify" data-index="{{index}}">{{item.name}}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="right">
+    <view class="right-header">
+      <view class="num">共176个测评</view>
+      <view class="type">
+        <view class="new">最新</view>
+        <view class="hot active">最热</view>
+      </view>
+    </view>
+    <scroll-view scroll-y="true" class="right-scroll-view">
+      <block tt:for="{{titleList}}">
+        <view class="con">
+          <image src="{{item.img}}" mode="aspectFill" />
+          <view class="info">
+            <view class="title">{{item.title}}</view>
+            <view class="msg">{{item.msg}}</view>
+            <view class="hot">
+              <view class="icon"></view>
+              <view class="num">{{item.num}}人已测</view>
+            </view>
+            <view class="btn">立即测试</view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
