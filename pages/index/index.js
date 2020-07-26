@@ -1,3 +1,5 @@
+import networkApi from '../../utils/api';
+
 const app = getApp()
 
 Page({
@@ -18,5 +20,15 @@ Page({
   },
   onLoad: function () {
     console.log('Welcome to Mini Code')
+    this.getList()
   },
+  getList() {
+		networkApi.meshes_v1.list({
+			page: 1,
+		}).then((res) => {
+      console.log(res,123);
+    }).finally(() => {
+      console.log(456);
+		});
+	},
 })
