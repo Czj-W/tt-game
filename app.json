@@ -2,7 +2,10 @@
   "pages":[
     "pages/index/index",
     "pages/classify/index",
-    "pages/user/index"
+		"pages/user/index",
+		"pages/quizzes/detail",
+		"pages/quizzes/game",
+		"pages/quizzes/result"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,0 +1,206 @@
+.res {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(156, 82, 255);
+}
+
+.res .title {
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  font-size: 50rpx;
+  color: #ffffff;
+  letter-spacing: 3rpx;
+  margin-bottom: 60rpx;
+}
+
+.res .box-tested {
+  width: 100%;
+  padding: 0 30rpx;
+  display: flex;
+  margin-bottom: 60rpx;
+}
+
+.box-tested .tested {
+  border: 1px solid rgb(69, 0, 94);
+  border-radius: 30rpx;
+  background: linear-gradient(90deg, rgb(255, 104, 147) 0%, rgba(253, 146, 154, 1) 100%);
+  padding: 0 15rpx;
+  font-size: 24rpx;
+  color: #ffffff;
+  height: 40rpx;
+  line-height: 37rpx;
+  box-sizing: border-box;
+  letter-spacing: 3rpx;
+}
+
+.res .res-box {
+  width: 690rpx;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 50rpx;
+}
+
+.res-box .res-box-txt {
+  position: absolute;
+  left: 0;
+  top: -40rpx;
+  font-size: 40rpx;
+  color: #ffffff;
+  box-shadow: 0px 2rpx 10rpx 4rpx rgba(0, 0, 0, .2);
+  z-index: 99;
+}
+.res-box .jump{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.res-box .jump .txt{
+  width: 500rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+}
+.res-box .res-box-info{
+  width: 100%;
+  border-radius: 20rpx;
+  border: 1px solid rgb(69, 0, 94);
+  overflow: hidden;
+  background-color: #fff;
+  padding-bottom: 30rpx;
+  margin-bottom: 50rpx;
+}
+.res-box-info .fraction{
+  width: 100%;
+  background-color: rgb(255, 215, 93);
+  height: 200rpx;
+  text-align: center;
+  padding: 0 30rpx;
+  padding-top: 35rpx;
+  letter-spacing: 3rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(69, 0, 94);
+  margin-bottom: 30rpx;
+  font-size: 50rpx;
+}
+.res-box-info .detail{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  font-size: 35rpx;
+  color: rgb(69, 0, 94);
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.res-box-info .msg{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: rgb(113, 120, 127);
+}
+.res-box .btns{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.btns .share,
+.btns .video{
+  width:300rpx;
+  height:90rpx;
+  background-color: rgb(254, 214, 92);
+  border-radius:60rpx;
+  border: 3px solid rgb(69, 0, 94);
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 75rpx;
+  font-size: 40rpx;
+  color: rgb(69, 0, 94);
+  letter-spacing: 5rpx;
+}
+.btns .video{
+  color: #fff;
+  background-color: rgb(252, 179, 82);
+}
+.res .more{
+  width: 100%;
+  border-radius: 30rpx 30rpx 0 0;
+  background-color: #fff;
+  padding: 50rpx 30rpx;
+}
+.more .more-txt{
+  width: 100%;
+  font-size: 60rpx;
+  color: rgb(69, 0, 94);
+  margin-bottom: 40rpx;
+}
+.more .list{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+.list .img{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+  border: 1px solid rgb(69, 0, 94);
+}
+.list .info{
+  flex: 1;
+}
+.list .info .info-title{
+  width: 500rpx;
+  white-space: nowrap;/*强调文本在一行内显示*/
+  overflow: hidden;/*溢出内容为隐藏*/
+  text-overflow: ellipsis;/*溢出文本显示省略号*/
+  font-size: 35rpx;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30rpx;
+}
+.list .info .msg{
+  width: 500rpx;
+  white-space: nowrap;/*强调文本在一行内显示*/
+  overflow: hidden;/*溢出内容为隐藏*/
+  text-overflow: ellipsis;/*溢出文本显示省略号*/
+  font-size: 26rpx;
+  color: rgb(170, 170, 170);
+  margin-bottom: 30rpx;
+}
+.list .info .info-box-tested {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.list .info .info-box-tested .tested {
+  border: 1px solid rgb(69, 0, 94);
+  border-radius: 30rpx;
+  background: linear-gradient(90deg, rgb(255, 104, 147) 0%, rgba(253, 146, 154, 1) 100%);
+  padding: 0 15rpx;
+  font-size: 24rpx;
+  color: #ffffff;
+  height: 40rpx;
+  line-height: 37rpx;
+  box-sizing: border-box;
+  letter-spacing: 3rpx;
+}
+.list .info .info-box-tested .jump{
+  width:180rpx;
+  height:60rpx;
+  background:rgba(255, 214, 92,1);
+  border-radius:60rpx;
+  border: 2px solid rgb(69, 0, 94);
+  line-height: 55rpx;
+  text-align: center;
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+}

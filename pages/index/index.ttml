@@ -10,14 +10,15 @@
       <image src="https://img-gewu.jifenone.com/images/bg-pro.png" class="slide-image" />
     </swiper-item>
   </swiper>
-  <view class="classify">
-    <block tt:for="{{classifyList}}">
+  <view scroll-x="true" class="classify">
+    <block tt:for="{{classifyList}}" tt:if="{{index<=4}}">
       <view class="con">
-        <image class="con-img" src="{{item.icon}}" mode="aspectFit" />
+        <image class="con-img" src="https://img-gewu.jifenone.com/images/cart.png" mode="aspectFit" />
         <view class="txt">{{item.name}}</view>
       </view>
     </block>
   </view>
+
   <view class="selected">
     <view class="selected-header">
       <view class="txt-box">
@@ -31,31 +32,31 @@
     </view>
     <scroll-view scroll-x="true" class="scroll-view">
       <view class="con">
-        <block tt:for="{{titleList}}">
-          <view class="con-jump">
-            <image src="{{item.img}}" mode="aspectFill" />
+        <block tt:for="{{list1}}" tt:if="{{index<=2}}">
+          <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="con-jump">
+            <image src="{{item.list_picture_url}}" mode="aspectFill" />
             <view class="info">
               <view class="title">{{item.title}}</view>
               <view class="hot">
                 <view class="icon"></view>
-                <view class="num">{{item.num}}人已测</view>
+                <view class="num">{{item.join_num}}人已测</view>
               </view>
             </view>
-          </view>
+          </navigator>
         </block>
       </view>
       <view class="con">
-        <block tt:for="{{titleList}}">
-          <view class="con-jump">
-            <image src="{{item.img}}" mode="aspectFill" />
+        <block tt:for="{{list2}}" tt:if="{{index<=2}}">
+          <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="con-jump">
+            <image src="{{item.list_picture_url}}" mode="aspectFill" />
             <view class="info">
               <view class="title">{{item.title}}</view>
               <view class="hot">
                 <view class="icon"></view>
-                <view class="num">{{item.num}}人已测</view>
+                <view class="num">{{item.join_num}}人已测</view>
               </view>
             </view>
-          </view>
+          </navigator>
         </block>
       </view>
     </scroll-view>
@@ -65,19 +66,19 @@
     <view class="txt1">仅供娱乐</view>
   </view>
   <view class="testList">
-    <block tt:for="{{titleList}}">
-      <view class="con">
-        <image src="{{item.img}}" mode="aspectFill" />
+    <block tt:for="{{list1}}">
+      <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="con">
+        <image src="{{item.list_picture_url}}" mode="aspectFill" />
         <view class="info">
           <view class="title">{{item.title}}</view>
-          <view class="msg">{{item.msg}}</view>
+          <view class="msg">{{item.description}}</view>
           <view class="hot">
             <view class="icon"></view>
-            <view class="num">{{item.num}}人已测</view>
+            <view class="num">{{item.join_num}}人已测</view>
           </view>
           <view class="btn">立即测试</view>
         </view>
-      </view>
+      </navigator>
     </block>
   </view>
 </view>

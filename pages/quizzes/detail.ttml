@@ -1,0 +1,22 @@
+<view class="detail">
+  <image src="https://img-gewu.jifenone.com/images/bg-pro.png" mode="scaleToFill" class="img" />
+  <view class="info">
+    <view class="title">你的情商有多高？</view>
+    <view class="msg">情商通常是指情绪商数，简称EQ，主要是指人在情绪、意志、耐受挫折等方面的品质。人与人之间的情商并无明显的先天差别，更多与后天的培养息息相关。那么，生活中的你是一个高情商的人吗？来自检一下吧！</view>
+    <view class="data">
+      <view class="con">
+        <view class="num">10<span class="unit">道</span></view>
+        <view class="txt">专业题目</view>
+      </view>
+      <view class="con">
+        <view class="num">1000</view>
+        <view class="txt">参与测试</view>
+      </view>
+      <view class="con">
+        <view class="num">98<span class="unit">%</span></view>
+        <view class="txt">好评率</view>
+      </view>
+    </view>
+  </view>
+  <view class="jump-btn">立即免费测评</view>
+</view>

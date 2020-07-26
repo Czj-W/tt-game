@@ -10,7 +10,7 @@
 	"projectname": "test-game",
 	"condition": {
 		"miniprogram": {
-			"current": 0,
+			"current": -1,
 			"list": [
 				{
 					"id": 0,
@@ -27,6 +27,39 @@
 					"id": 1,
 					"name": "我的",
 					"pathName": "pages/user/index",
+					"query": "",
+					"scene": "011001",
+					"referrerInfo": {
+						"appId": "",
+						"extraData": ""
+					}
+				},
+				{
+					"id": 2,
+					"name": "测试详情",
+					"pathName": "pages/quizzes/detail",
+					"query": "id=10",
+					"scene": "011001",
+					"referrerInfo": {
+						"appId": "",
+						"extraData": ""
+					}
+				},
+				{
+					"id": 3,
+					"name": "开始测试",
+					"pathName": "pages/quizzes/game",
+					"query": "",
+					"scene": "011001",
+					"referrerInfo": {
+						"appId": "",
+						"extraData": ""
+					}
+				},
+				{
+					"id": 4,
+					"name": "查看结果",
+					"pathName": "pages/quizzes/result",
 					"query": "",
 					"scene": "011001",
 					"referrerInfo": {

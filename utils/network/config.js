@@ -1,4 +1,4 @@
-const Base_PATH = 'http://gewu-api-staging.jifenone.com';
+const Base_PATH = 'http://zihao.ngrok.dy.bilifoo.com';
 
 module.exports = {
 	Base_PATH,
