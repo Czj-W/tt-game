@@ -1,13 +1,12 @@
 <view class="game">
   <view class="header">
-    <view class="num">3/8</view>
+    <view class="num">{{num+1}}/{{quesList.length}}</view>
     <view class="tested">822.87万人已测</view>
   </view>
-  <view class="title">你有过在商店看见喜欢的东西，便大肆表达赞美之情</view>
-  <view class="options {{activeID===0?'active':''}}" bindtap="check" data-index="{{0}}">
-    A. 有
+  <view class="title">{{quesList[num].title}}</view>
+  <block tt:for="{{quesList[num].answers}}" tt:key="index">
+    <view class="options {{activeID===item.id?'active':''}}" bindtap="check" data-item="{{item}}">
+    {{letter[index]}}. {{item.content}}
   </view>
-  <view class="options {{activeID===1?'active':''}}" bindtap="check" data-index="{{1}}">
-    B. 没有
-  </view>
+  </block>
 </view>

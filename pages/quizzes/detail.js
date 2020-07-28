@@ -8,7 +8,7 @@ Page({
   },
   onLoad: function (option) {
     console.log(option, 'id')
-    let id = option.id||''
+    let id = option.id || ''
     this.getDetail(id)
   },
   getDetail(id) {
@@ -22,5 +22,10 @@ Page({
     }).finally(() => {
 
 		});
-  }
+  },
+  setQues() {
+    let quesList = JSON.stringify(this.data.detail.questions)
+    tt.setStorageSync('quesList', quesList)
+    tt.navigateTo({ url: '/pages/quizzes/game?id='+this.data.detail.id });
+  },
 })

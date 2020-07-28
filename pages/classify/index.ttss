@@ -136,7 +136,7 @@
 }
 
 .right-scroll-view .con .info .hot .icon {
-  background-image: url('https://img-gewu.jifenone.com/images/pay-success-icon.png');
+  background-image: url('https://img-gewu.jifenone.com/images/adx-fire.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 25rpx;

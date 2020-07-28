@@ -1,35 +1,37 @@
 <view class="res">
-  <view class="title">你的情绪控制欲有多强</view>
+  <view class="title">{{detail.title}}</view>
   <view class="box-tested">
-    <view class="tested">822.87万人已测</view>
+    <view class="tested">{{detail.join_num||0}}人已测</view>
   </view>
   <view class="res-box">
-    <view class="res-box-txt">测评结果</view>
+    <view class="res-box-txt"></view>
     <view class="res-box-info">
-      <view class="fraction">控制欲指数：60分</view>
+      <view class="fraction">控制欲指数：{{result.content.result1}}</view>
       <view class="detail">详情分析：</view>
-      <view class="msg">就极度空灵撒进口量刻录机抵抗力散开两局了开始来看剧抵抗力领款单领款单建设路口考了差尼可拉斯大考了差克里斯蒂娜立刻了肯定是你离开看你傻连电脑</view>
+      <view class="msg">{{result.content.result2}}</view>
     </view>
     <view class="btns">
       <view class="share">分享好友</view>
       <view class="video">拍个视频</view>
     </view>
-    <view class="jump">
-      <view class="txt">看广告免费查看结果</view>
+    <view class="jump" bindtap="showAd" tt:if="{{!isShowResult}}">
+      <view class="txt"></view>
     </view>
   </view>
   <view class="more">
-    <view class="more-txt">更多推荐</view>
-    <view class="list">
-      <image class="img" src="https://img-gewu.jifenone.com/images/bg-pro.png" mode="aspectFill" />
+    <view class="more-txt"></view>
+    <block tt:for="{{testList}}" tt:key="index">
+    <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="list">
+      <image class="img" src="{{item.list_picture_url}}" mode="aspectFill" />
       <view class="info">
-        <view class="info-title">你的第六感有多准</view>
-        <view class="msg">考虑到荆防颗粒就是看了了快递费考虑罚款了放假开了多少</view>
+        <view class="info-title">{{item.title}}</view>
+        <view class="msg">{{item.description}}</view>
         <view class="info-box-tested">
-          <view class="tested">822.87万人已测</view>
+          <view class="tested">{{item.join_num}}人已测</view>
           <view class="jump">立即测试</view>
         </view>
       </view>
-    </view>
+    </navigator>
+    </block>
   </view>
 </view>

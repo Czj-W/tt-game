@@ -6,11 +6,11 @@
 		"minified": true,
 		"newFeature": true
 	},
-	"appid": "testappId",
+	"appid": "tt63f51548fccf7d8f",
 	"projectname": "test-game",
 	"condition": {
 		"miniprogram": {
-			"current": -1,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -60,7 +60,7 @@
 					"id": 4,
 					"name": "查看结果",
 					"pathName": "pages/quizzes/result",
-					"query": "",
+					"query": "id=10&score=20",
 					"scene": "011001",
 					"referrerInfo": {
 						"appId": "",

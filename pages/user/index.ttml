@@ -1,28 +1,32 @@
 <view class="index">
   <view class="header">
-    <image src="https://img-gewu.jifenone.com/images/user-avatar.png" mode="aspectFill" />
-    <view class="info">
-      <view class="name">用户2479823174</view>
-      <view class="ID">ID:1323526</view>
+    <view class="user-info">
+      <image src="https://img-gewu.jifenone.com/images/adx-default-avatar.png" mode="aspectFill" />
+      <view class="info">
+        <view class="name">用户2479823174</view>
+        <view class="ID">ID:1323526</view>
+      </view>
     </view>
-  </view>
-  <view class="btns">
-    <view class="btn">
-      <view class="icon"></view>
-      <view class="txt">意见反馈</view>
-    </view>
-    <view class="btn">
-      <view class="icon"></view>
-      <view class="txt">电话客服</view>
-    </view>
-    <view class="btn">
-      <view class="icon"></view>
-      <view class="txt">商务合作</view>
+    <view class="btns">
+      <view class="btn">
+        <view class="icon"></view>
+        <view class="txt">意见反馈</view>
+      </view>
+      <view class="btn">
+        <view class="icon call"></view>
+        <view class="txt">电话客服</view>
+      </view>
+      <view class="btn">
+        <view class="icon hezuo"></view>
+        <view class="txt">商务合作</view>
+      </view>
     </view>
   </view>
   <view class="record">测评记录</view>
-  <view class="nolist">
-    <view class="icon"></view>
-    <view class="txt">您还没有任何测试记录哦!</view>
+  <view class="list-box">
+    <view class="nolist">
+      <view class="icon"></view>
+      <view class="txt">您还没有任何测试记录哦!</view>
+    </view>
   </view>
 </view>

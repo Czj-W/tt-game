@@ -70,17 +70,11 @@ font-size: 24rpx;
 .detail .jump-btn{
   z-index: 99;
   position: fixed;
-  width:662rpx;
-  height:90rpx;
-  background:rgba(247, 213, 106,1);
-  border: 2rpx solid rgb(115, 20, 112);
-  border-radius:60rpx;
-  left: 44rpx;
+  width:696rpx;
+  height:98rpx;
+  background-image: url('https://img-gewu.jifenone.com/images/adx-freetest.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  left: 27rpx;
   bottom: 37rpx;
-  font-size:32rpx;
-  font-weight:400;
-  color:rgb(41,42,43);
-  line-height:90rpx;
-  letter-spacing:3rpx;
-  text-align: center;
 }

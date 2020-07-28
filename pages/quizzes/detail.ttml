@@ -18,5 +18,5 @@
       </view>
     </view>
   </view>
-  <view class="jump-btn">立即免费测评</view>
+  <view class="jump-btn" bindtap="setQues" tt:if="{{detail}}"></view>
 </view>

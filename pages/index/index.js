@@ -5,12 +5,7 @@ const app = getApp()
 Page({
   data: {
     classifyList: [],
-    titleList: [
-      { img: 'https://img-gewu.jifenone.com/images/bg-pro.png', title: '你的情商有多高', num: '22223',msg:'智能代理：意思就是说，中国的网站不走我们的代理，国外的网站走代理，' },
-      { img: 'https://img-gewu.jifenone.com/images/bg-pro.png', title: '你的情商有多高', num: '22223',msg:'智能代理：意思就是说，中国的网站不走我们的代理，国外的网站走代理，' },
-      { img: 'https://img-gewu.jifenone.com/images/bg-pro.png', title: '你的情商有多高', num: '22223', msg: '智能代理：意思就是说，中国的网站不走我们的代理，国外的网站走代理，' },
-
-    ],
+    titleList: [],
     list1: [],
     list2:[]
   },
@@ -22,7 +17,23 @@ Page({
 		networkApi.category_v1.list().then((res) => {
       console.log(res, '获取分类');
       let classifyList = res.data
+      let base_url = 'https://img-gewu.jifenone.com/images/'
       classifyList.forEach((v, i) => {
+        if (v.name === '游戏') {
+          v.url = base_url+'adx-game.png'
+        }
+        if (v.name === '情感') {
+          v.url = base_url+'adx-qinggan.png'
+        }
+        if (v.name === '性格') {
+          v.url = base_url+'adx-xingge.png'
+        }
+        if (v.name === '智商') {
+          v.url = base_url+'adx-iq.png'
+        }
+        if (v.name === '职场') {
+          v.url = base_url+'adx-work.png'
+        }
         this.getRandomTestList(1,v.id)
       })
       this.setData({
@@ -60,5 +71,11 @@ Page({
     }).finally(() => {
 
 		});
-  }
+  },
+  jumpCategory(e) {
+    let id = e.currentTarget.dataset.item.id
+    id = JSON.stringify(id)
+    tt.setStorageSync('categoryID', id)
+    tt.switchTab({ url: '/pages/classify/index' });
+  },
 })

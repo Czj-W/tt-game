@@ -28,7 +28,7 @@ let quizzes_v1 = {
   result(data) {//测试结果
     return handler.requestPromise({
       url: `${this.base_uri}/${data.id}/result`,
-      method: 'GET',
+      method: 'POST',
       data: data,
     });
   },

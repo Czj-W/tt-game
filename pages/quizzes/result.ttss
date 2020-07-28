@@ -44,10 +44,12 @@
 .res-box .res-box-txt {
   position: absolute;
   left: 0;
-  top: -40rpx;
-  font-size: 40rpx;
-  color: #ffffff;
-  box-shadow: 0px 2rpx 10rpx 4rpx rgba(0, 0, 0, .2);
+  top: -30rpx;
+  width: 166rpx;
+  height: 43rpx;
+  background-image: url('https://img-gewu.jifenone.com/images/adx-result.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   z-index: 99;
 }
 .res-box .jump{
@@ -60,8 +62,12 @@
   border-radius: 20rpx;
 }
 .res-box .jump .txt{
-  width: 500rpx;
+  width: 510rpx;
   margin: 0 auto;
+  height: 98rpx;
+  background-image: url('https://img-gewu.jifenone.com/images/adx-viewAd.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   margin-top: 100rpx;
 }
 .res-box .res-box-info{
@@ -133,9 +139,11 @@
   padding: 50rpx 30rpx;
 }
 .more .more-txt{
-  width: 100%;
-  font-size: 60rpx;
-  color: rgb(69, 0, 94);
+  width: 166rpx;
+  height: 43rpx;
+  background-image: url('https://img-gewu.jifenone.com/images/adx-more.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   margin-bottom: 40rpx;
 }
 .more .list{
