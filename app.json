@@ -18,24 +18,24 @@
 			{
 				"pagePath": "pages/index/index",
 				"text": "首页",
-				"iconPath": "./images/tabbar_new.png",
-				"selectedIconPath": "./images/tabbar_new_active.png"
+				"iconPath": "./images/adx-tabbar-index-default.png",
+				"selectedIconPath": "./images/adx-tabbar-index.png"
 			},
 			{
 				"pagePath": "pages/classify/index",
 				"text": "分类",
-				"iconPath": "./images/tabbar_home.png",
-				"selectedIconPath": "./images/tabbar_home_active.png"
+				"iconPath": "./images/adx-tabbar-category-default.png",
+				"selectedIconPath": "./images/adx-tabbar-category.png"
 			},
 			{
 				"pagePath": "pages/user/index",
 				"text": "我的",
-				"iconPath": "./images/tabbar_my.png",
-				"selectedIconPath": "./images/tabbar_my_active.png"
+				"iconPath": "./images/adx-tabbar-my-default.png",
+				"selectedIconPath": "./images/adx-tabbar-my.png"
 			}
 		],
 		"backgroundColor": "#fff",
-    "selectedColor": "#CEB68A",
+    "selectedColor": "#666666",
     "borderStyle":"white"
 	}
 }

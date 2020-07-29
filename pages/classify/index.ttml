@@ -14,9 +14,9 @@
         <view class="hot {{type===1?'active':''}}" bindtap="handleType" data-index="{{1}}">最热</view>
       </view>
     </view>
-    <scroll-view scroll-y="true" class="right-scroll-view">
+    <scroll-view scroll-y="true" class="right-scroll-view" bindscrolltolower="next" scroll-into-view="{{scrollIntoView}}">
       <block tt:for="{{titleList}}">
-        <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="con">
+        <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="con" id="id{{index}}">
           <image src="{{item.list_picture_url}}" mode="aspectFill" />
           <view class="info">
             <view class="title">{{item.title}}</view>

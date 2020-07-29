@@ -76,6 +76,7 @@ export default {
       options.data.redirect = true;
     }
     options.header = {
+      'Authorization': miniapp.getStorageSync('auth_token')||'',
       'client-info': 'miniapp/7.3.0',
       'content-type': 'application/json',
     };

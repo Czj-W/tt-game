@@ -7,7 +7,10 @@ Page({
     classifyList: [],
     active: 0,
     titleList: [],
-    type:1
+    type: 1,
+    page: 1,
+    scrollIntoView:'',
+    id:''
   },
   onLoad: function () {
 
@@ -35,7 +38,7 @@ Page({
             }
           });
         } else {
-          this.getRandomTestList(1,classifyList[0].id)  
+          this.getRandomTestList(this.data.page,classifyList[0].id)  
         }
       }
       this.setData({
@@ -47,17 +50,36 @@ Page({
 
 		});
   },
-  getRandomTestList(page,id) {
-		networkApi.quizzes_v1.randsList({page,id}).then((res) => {
-      console.log(res, '随机列表');
+  getRandomTestList(page,id,scrollIntoView='') {
+    networkApi.quizzes_v1.list({ page, id }).then((res) => {
+      let list = this.data.titleList
+      if (page > 1 && res.data.length > 0) {
+        list = [...list, ...res.data]
+        this.setData({
+          page,
+        })
+      } else {
+        this.setData({
+          page:1
+        })
+        list = res.data
+      }
       this.setData({
-        titleList:res.data
+        titleList: list,
+        id,
+      }, () => {
+          this.setData({
+            scrollIntoView
+          })
       })
     }).catch(err => {
       console.log(err,'err')
     }).finally(() => {
 
 		});
+  },
+  next() {
+    this.getRandomTestList(this.data.page+1,this.data.id)
   },
   handleType(e) {
     this.setData({
@@ -66,7 +88,7 @@ Page({
   },
   handleClassify(e) {
     let item = e.currentTarget.dataset.item
-    this.getRandomTestList(1,item.id)
+    this.getRandomTestList(1,item.id,'id0')
     this.setData({
       active:+e.currentTarget.dataset.index
     })

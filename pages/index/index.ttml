@@ -32,7 +32,7 @@
     </view>
     <scroll-view scroll-x="true" class="scroll-view">
       <view class="con">
-        <block tt:for="{{list1}}" tt:if="{{index<=2}}">
+        <block tt:for="{{list}}" tt:if="{{index<=2}}">
           <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="con-jump">
             <image src="{{item.list_picture_url}}" mode="aspectFill" />
             <view class="info">
@@ -46,7 +46,7 @@
         </block>
       </view>
       <view class="con">
-        <block tt:for="{{list2}}" tt:if="{{index<=2}}">
+        <block tt:for="{{list}}" tt:if="{{index>2&&index<=5}}">
           <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="con-jump">
             <image src="{{item.list_picture_url}}" mode="aspectFill" />
             <view class="info">
@@ -66,7 +66,7 @@
     <view class="txt1">仅供娱乐</view>
   </view>
   <view class="testList">
-    <block tt:for="{{list1}}">
+    <block tt:for="{{titleList}}">
       <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="con">
         <image src="{{item.list_picture_url}}" mode="aspectFill" />
         <view class="info">

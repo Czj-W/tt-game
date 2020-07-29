@@ -6,11 +6,12 @@ Page({
   data: {
     classifyList: [],
     titleList: [],
-    list1: [],
-    list2:[]
+    list: [],
+    page: 1,
   },
   onLoad: function () {
     this.getCategoryList()
+    this.getRandomTestList()
     this.getBanners()
   },
   getCategoryList() {
@@ -34,7 +35,7 @@ Page({
         if (v.name === '职场') {
           v.url = base_url+'adx-work.png'
         }
-        this.getRandomTestList(1,v.id)
+        this.geList(v.id)
       })
       this.setData({
         classifyList
@@ -53,18 +54,35 @@ Page({
     }).finally(() => {
 		});
   },
-  getRandomTestList(page,id) {
-		networkApi.quizzes_v1.randsList({page,id}).then((res) => {
-      console.log(res, '随机列表');
-      let {list1,list2} = this.data
-      if (id%2===0) {
-        list1 = [...list1,...res.data]
+  geList(id) {
+		networkApi.quizzes_v1.list({page:1,id}).then((res) => {
+      console.log(res, '列表');
+      let list = this.data.list
+      this.setData({
+        list:[...list,res.data[0]]
+      })
+    }).catch(err => {
+      console.log(err,'err')
+    }).finally(() => {
+
+		});
+  },
+  getRandomTestList() {
+		networkApi.quizzes_v1.randsList({page:this.data.page}).then((res) => {
+      let list = this.data.titleList
+      if (res.data.length === 0&&this.data.page > 1) {
+        this.setData({
+          page:this.data.page-1
+        })
+        return false
+      }
+      if (this.data.page > 1){
+        list = [...list,...res.data]
       } else {
-        list2 = [...list2,...res.data]
+        list = res.data
       }
       this.setData({
-        list1,
-        list2
+        titleList:list
       })
     }).catch(err => {
       console.log(err,'err')
@@ -78,4 +96,15 @@ Page({
     tt.setStorageSync('categoryID', id)
     tt.switchTab({ url: '/pages/classify/index' });
   },
+  onReachBottom() {
+    // 上拉加载下一页
+		if (this.data.titleList.length > 0) {
+      this.setData({
+        page:this.data.page+1
+      }, () => {
+          this.getRandomTestList()
+      })
+		}
+	},
 })
+
