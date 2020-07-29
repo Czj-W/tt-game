@@ -2,7 +2,9 @@
   <image src="{{detail.list_picture_url}}" mode="scaleToFill" class="img" />
   <view class="info">
     <view class="title">{{detail.title}}</view>
-    <view class="msg">{{detail.description}}</view>
+    <view class="msg">
+      <rich-text nodes="{{detail.description}}"></rich-text>
+    </view>
     <view class="data">
       <view class="con">
         <view class="num">{{detail.quiz_num}}<span class="unit">道</span></view>

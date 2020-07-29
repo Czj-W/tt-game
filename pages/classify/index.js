@@ -51,7 +51,8 @@ Page({
 		});
   },
   getRandomTestList(page,id,scrollIntoView='') {
-    networkApi.quizzes_v1.list({ page, id }).then((res) => {
+    networkApi.quizzes_v1.list({ page, category_id: id, sort_type: this.data.type === 0 ? 'new' : 'hot' }).then((res) => {
+      console.log(res.data,'分类列表');
       let list = this.data.titleList
       if (page > 1 && res.data.length > 0) {
         list = [...list, ...res.data]
@@ -85,6 +86,7 @@ Page({
     this.setData({
       type:+e.currentTarget.dataset.index
     })
+    this.getRandomTestList(1,this.data.id)
   },
   handleClassify(e) {
     let item = e.currentTarget.dataset.item

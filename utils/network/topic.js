@@ -32,6 +32,13 @@ let quizzes_v1 = {
       data: data,
     });
   },
+  history(data) {//查看历史结果
+    return handler.requestPromise({
+      url: `${this.base_uri}/history`,
+      method: 'GET',
+      data: data,
+    });
+  },
 }
 
 module.exports = {

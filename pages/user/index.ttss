@@ -97,7 +97,76 @@
   color: rgba(27, 28, 60, 1);
   margin-bottom: 28rpx;
 }
-
+.index .list-box{
+  width: 100%;
+  padding: 0 20rpx;
+  padding-top: 20rpx;
+}
+.index .list-box .con{
+  width: 100%;
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.list-box .con image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+  margin-right: 20px;
+}
+.list-box .con .info{
+  flex: 1;
+  height: 200rpx;
+  position: relative;
+}
+.list-box .con .info .title{
+  font-size: 35rpx;
+  margin-bottom: 20rpx;
+  width: 450rpx;
+  white-space: nowrap;/*强调文本在一行内显示*/
+  overflow: hidden;/*溢出内容为隐藏*/
+  text-overflow: ellipsis;/*溢出文本显示省略号*/
+}
+.list-box .con .info .msg{
+  width: 450rpx;
+  font-size: 26rpx; 
+  color: rgb(124, 131, 159);
+  margin-bottom: 50rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.list-box .con .info .hot{
+  display: flex;
+  align-items: center;
+}
+.list-box .con .info .hot .icon{
+  background-image: url('https://img-gewu.jifenone.com/images/adx-fire.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 6rpx;
+}
+.list-box .con .info .hot .num{
+  font-size: 26rpx;
+  color: rgb(164, 171, 177);
+}
+.list-box .info .btn{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 180rpx;
+  height: 60rpx;
+  background-color: rgb(249, 238, 236);
+  border-radius: 30rpx;
+  text-align: center;
+  color: rgb(237, 121, 82);
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 24rpx;
+}
 .list-box .nolist {
   width: 100%;
   padding-top: 70rpx;

@@ -115,6 +115,10 @@
 .right-scroll-view .con .info .title {
   font-size: 30rpx;
   margin-bottom: 10rpx;
+  width: 350rpx;
+  white-space: nowrap;/*强调文本在一行内显示*/
+  overflow: hidden;/*溢出内容为隐藏*/
+  text-overflow: ellipsis;/*溢出文本显示省略号*/
 }
 
 .right-scroll-view .con .info .msg {
@@ -128,6 +132,11 @@
   /*溢出内容为隐藏*/
   text-overflow: ellipsis;
   /*溢出文本显示省略号*/
+}
+p{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 .right-scroll-view .con .info .hot {

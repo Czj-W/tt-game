@@ -1,14 +1,10 @@
 <view class="index">
-  <swiper indicator-dots indicator-dots="{{false}}" indicator-active-color="rgba(206,182,138,1)" autoplay="{{true}}" interval="{{5000}}">
-    <swiper-item>
-      <image src="https://img-gewu.jifenone.com/images/bg-pro.png" class="slide-image" />
-    </swiper-item>
-    <swiper-item>
-      <image src="https://img-gewu.jifenone.com/images/bg-pro.png" class="slide-image" />
-    </swiper-item>
-    <swiper-item>
-      <image src="https://img-gewu.jifenone.com/images/bg-pro.png" class="slide-image" />
-    </swiper-item>
+  <swiper indicator-dots indicator-dots="{{false}}" indicator-active-color="rgba(206,182,138,1)" autoplay="{{true}}" interval="{{5000}}" tt:if="{{bannerList.length>0}}">
+    <block tt:for="{{bannerList}}" tt:key="index">
+      <swiper-item>
+        <image bindtap="jumpTest" data-item="{{item}}" src="{{item.avatar_url}}" class="slide-image" />
+      </swiper-item>
+    </block>
   </swiper>
   <view scroll-x="true" class="classify">
     <block tt:for="{{classifyList}}" tt:if="{{index<=4}}">
@@ -71,7 +67,9 @@
         <image src="{{item.list_picture_url}}" mode="aspectFill" />
         <view class="info">
           <view class="title">{{item.title}}</view>
-          <view class="msg">{{item.description}}</view>
+          <view class="msg">
+            <rich-text nodes="{{item.description}}"></rich-text>
+          </view>
           <view class="hot">
             <view class="icon"></view>
             <view class="num">{{item.join_num}}人已测</view>

@@ -5,7 +5,8 @@ const app = getApp()
 
 Page({
   data: {
-    userInfo:''
+    userInfo: '',
+    historyList:[]
   },
   onLoad: function () {
   },
@@ -16,6 +17,7 @@ Page({
       this.handleShowModal()
     } else {
       userInfo = JSON.parse(userInfo)
+      this.getHistory()
       this.setData({
         userInfo,
       })
@@ -29,13 +31,13 @@ Page({
       success(res) {
         if (res.confirm) {
           tt.getUserInfo({
-            withCredentials:true,
+            withCredentials: true,
             success(res) {
               let localCode = tt.getStorageSync("localCode");
               let option = {
                 code: localCode,
                 encryptedData: res.encryptedData,
-                iv:res.iv
+                iv: res.iv
               }
               that.setUserInfo(option)
             },
@@ -49,18 +51,32 @@ Page({
         console.log(`showModal调用失败`);
       },
     });
-    
+
   },
   setUserInfo(option) {
     networkApi.user_v1.info(option).then((result) => {
-      console.log(result,456);
-      // let info = JSON.stringify(result.data)
-      // tt.setStorageSync('userInfo', info);
+      console.log(result, 456);
+      tt.setStorageSync('auth_token', result.data.auth_token);
+      let userInfo = JSON.stringify(result.data)
+      tt.setStorageSync('userInfo', userInfo);
+      this.setData({ userInfo: result.data }, () => {
+        this.getHistory()
+      })
+    }).catch((error) => {
+      console.log(error);
+    });
+  },
+  getHistory() {
+    networkApi.quizzes_v1.history().then((res) => {
+      this.setData({
+        historyList:res.data
+      })
+      console.log(res, 456);
     }).catch((error) => {
       console.log(error);
     });
   },
   getPhoneNumberHandler(e) {
-    console.log(e,123);
+    console.log(e, 123);
   },
 })

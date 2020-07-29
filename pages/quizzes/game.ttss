@@ -44,7 +44,7 @@
 }
 .game .options{
   width: 690rpx;
-  height: 80rpx;
+  min-height: 80rpx;
   margin: 0 auto;
   background-color: #ffffff;
   border-radius: 20rpx;

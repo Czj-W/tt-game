@@ -120,6 +120,11 @@
   font-size: 32rpx;
   margin-bottom: 30rpx;
   font-weight: bold;
+  width: 350rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 .con-jump .info .hot{
   display: flex;
@@ -192,6 +197,11 @@
   white-space: nowrap;/*强调文本在一行内显示*/
   overflow: hidden;/*溢出内容为隐藏*/
   text-overflow: ellipsis;/*溢出文本显示省略号*/
+}
+p{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 .testList .con .info .hot{
   display: flex;

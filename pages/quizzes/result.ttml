@@ -6,9 +6,11 @@
   <view class="res-box">
     <view class="res-box-txt"></view>
     <view class="res-box-info">
-      <view class="fraction">控制欲指数：{{result.content.result1}}</view>
+      <view class="fraction">{{result.content.result1}}</view>
       <view class="detail">详情分析：</view>
-      <view class="msg">{{result.content.result2}}</view>
+      <view class="msg">
+        <rich-text nodes="{{result.content.result2}}"></rich-text>
+      </view>
     </view>
     <view class="btns">
       <view class="share">分享好友</view>
@@ -21,17 +23,17 @@
   <view class="more">
     <view class="more-txt"></view>
     <block tt:for="{{testList}}" tt:key="index">
-    <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="list">
-      <image class="img" src="{{item.list_picture_url}}" mode="aspectFill" />
-      <view class="info">
-        <view class="info-title">{{item.title}}</view>
-        <view class="msg">{{item.description}}</view>
-        <view class="info-box-tested">
-          <view class="tested">{{item.join_num}}人已测</view>
-          <view class="jump">立即测试</view>
+      <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="list">
+        <image class="img" src="{{item.list_picture_url}}" mode="aspectFill" />
+        <view class="info">
+          <view class="info-title">{{item.title}}</view>
+          <view class="msg">{{item.description}}</view>
+          <view class="info-box-tested">
+            <view class="tested">{{item.join_num}}人已测</view>
+            <view class="jump">立即测试</view>
+          </view>
         </view>
-      </view>
-    </navigator>
+      </navigator>
     </block>
   </view>
 </view>

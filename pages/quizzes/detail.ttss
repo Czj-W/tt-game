@@ -1,6 +1,6 @@
 .detail {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .detail .img {
@@ -20,6 +20,7 @@
   height: 100%;
   padding: 30rpx;
   box-sizing: border-box;
+  padding-bottom: 200rpx;
 }
 
 .detail .info .title {

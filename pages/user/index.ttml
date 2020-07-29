@@ -25,7 +25,16 @@
   <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumberHandler">授权手机号</button> -->
   <view class="record">测评记录</view>
   <view class="list-box">
-    <view class="nolist">
+    <block tt:for="{{historyList}}" tt:if="{{historyList.length>0}}">
+      <view class="con">
+        <image src="{{item.quiz.list_picture_url}}" mode="aspectFill" />
+        <view class="info">
+          <view class="title">{{item.quiz.title}}</view>
+          <view class="msg">得分结果：{{item.quiz_result.content.result1}}</view>
+        </view>
+      </view>
+    </block>
+    <view class="nolist" tt:else>
       <view class="icon"></view>
       <view class="txt">您还没有任何测试记录哦!</view>
     </view>

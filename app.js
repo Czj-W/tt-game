@@ -17,10 +17,10 @@ App({
 				redirect: false,
 			}).then((result) => {
 				result_data = result;
-        if (result.data.result_code === 1403) {
+				if (result.msg.meta.code === 1403) {
           tt.setStorageSync('auth_token', '');
 				}
-				else if (result.data.result_code === 1001) {
+				else if (result.msg.meta.code === 1001) {
 					util.generateLoginCode().then((result) => {
 						that.login();
 					});

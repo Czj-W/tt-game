@@ -5,6 +5,7 @@ const app = getApp()
 Page({
   data: {
     classifyList: [],
+    bannerList:[],
     titleList: [],
     list: [],
     page: 1,
@@ -48,14 +49,17 @@ Page({
   },
   getBanners() {
 		networkApi.banners_v1.list().then((res) => {
-      console.log(res,'获取轮播图');
+      console.log(res, '获取轮播图');
+      this.setData({
+        bannerList:res.data
+      })
     }).catch(err => {
       console.log(err,'err')
     }).finally(() => {
 		});
   },
   geList(id) {
-		networkApi.quizzes_v1.list({page:1,id}).then((res) => {
+		networkApi.quizzes_v1.list({page:1,category_id:id}).then((res) => {
       console.log(res, '列表');
       let list = this.data.list
       this.setData({
@@ -95,6 +99,14 @@ Page({
     id = JSON.stringify(id)
     tt.setStorageSync('categoryID', id)
     tt.switchTab({ url: '/pages/classify/index' });
+  },
+  jumpTest(e) {
+    let item = e.currentTarget.dataset.item
+    if (item.action_type === 1) {
+      tt.navigateTo({
+        url: `${item.acction_path}?id=${item.action_resource_id}`
+      });
+    }
   },
   onReachBottom() {
     // 上拉加载下一页
