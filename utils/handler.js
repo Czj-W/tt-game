@@ -73,6 +73,7 @@ export default {
       // 不跳转
     }
     else {
+      options.data.APPID = 'tt63f51548fccf7d8f';
       options.data.redirect = true;
     }
     options.header = {

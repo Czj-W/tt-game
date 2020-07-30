@@ -27,6 +27,7 @@
       </view>
     </view>
     <scroll-view scroll-x="true" class="scroll-view">
+    <block tt:if="{{selectionLength>=1}}">
       <view class="con">
         <block tt:for="{{list}}" tt:if="{{index<=2}}">
           <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="con-jump">
@@ -41,6 +42,8 @@
           </navigator>
         </block>
       </view>
+    </block>
+    <block tt:if="{{selectionLength>=2}}">
       <view class="con">
         <block tt:for="{{list}}" tt:if="{{index>2&&index<=5}}">
           <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="con-jump">
@@ -55,6 +58,23 @@
           </navigator>
         </block>
       </view>
+    </block>
+    <block tt:if="{{selectionLength>=3}}">
+      <view class="con">
+        <block tt:for="{{list}}" tt:if="{{index>5}}">
+          <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="con-jump">
+            <image src="{{item.list_picture_url}}" mode="aspectFill" />
+            <view class="info">
+              <view class="title">{{item.title}}</view>
+              <view class="hot">
+                <view class="icon"></view>
+                <view class="num">{{item.join_num}}人已测</view>
+              </view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </block>
     </scroll-view>
   </view>
   <view class="recommend">

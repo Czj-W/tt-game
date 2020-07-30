@@ -35,7 +35,7 @@ Page({
       let scores = score + Number(item.store)
       if (quesList[num].question_type === 2) {
         if (quesList.length === num + 1) {
-          tt.navigateTo({
+          tt.redirectTo({
             url: `/pages/quizzes/result?id=${this.data.id}&score=${scores}` // 指定页面的url
           });
           return false
@@ -49,7 +49,7 @@ Page({
       } else {
         let nums = Number(item.next) - 1
         if (nums < 0) {
-          tt.navigateTo({
+          tt.redirectTo({
             url: `/pages/quizzes/result?id=${this.data.id}&score=${nums}` // 指定页面的url
           });
           return false

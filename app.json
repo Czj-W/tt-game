@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/classify/index",
 		"pages/user/index",
+		"pages/user/suggest",
 		"pages/quizzes/detail",
 		"pages/quizzes/game",
 		"pages/quizzes/result"

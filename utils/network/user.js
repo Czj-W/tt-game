@@ -26,7 +26,19 @@ let user_v1 = {
     });
   },
 }
+let feedback_v1 = {
+  base_uri: `${API_PREFIX}/v1/feedbacks
+  `,
+  feedback(data) { 
+    return handler.requestPromise({
+      url: `${this.base_uri}`,
+      method: 'POST',
+      data: data,
+    });
+  },
+}
 
 module.exports = {
-	user_v1:user_v1,
+  user_v1: user_v1,
+  feedback_v1:feedback_v1
 };

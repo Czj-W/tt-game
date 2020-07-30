@@ -13,17 +13,17 @@
       </view>
     </view>
     <view class="btns">
-      <view class="share">分享好友</view>
-      <view class="video">拍个视频</view>
+      <button class="share" open-type="share">分享好友</button>
+      <button class="video" open-type="share" data-channel="video">拍个视频</button>
     </view>
-    <view class="jump" bindtap="showAd" tt:if="{{!isShowResult}}">
+    <view class="jump" bindtap="showAd" tt:if="{{isShowResult}}">
       <view class="txt"></view>
     </view>
   </view>
   <view class="more">
     <view class="more-txt"></view>
     <block tt:for="{{testList}}" tt:key="index">
-      <navigator hover-class="none" url="/pages/quizzes/detail?id={{item.id}}" class="list">
+      <navigator hover-class="none" open-type="redirect" url="/pages/quizzes/detail?id={{item.id}}" class="list">
         <image class="img" src="{{item.list_picture_url}}" mode="aspectFill" />
         <view class="info">
           <view class="info-title">{{item.title}}</view>

@@ -1,6 +1,7 @@
 .detail {
   width: 100%;
   min-height: 100vh;
+  background-color: rgb(75, 19, 180);
 }
 
 .detail .img {
@@ -17,7 +18,6 @@
   margin-top: -30rpx;
   border-radius: 30rpx 30rpx 0px 0px;
   background-color: rgb(75, 19, 180);
-  height: 100%;
   padding: 30rpx;
   box-sizing: border-box;
   padding-bottom: 200rpx;

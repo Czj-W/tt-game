@@ -1,0 +1,7 @@
+<form class="feedback-box" bindsubmit="formSubmit">
+    <view class="textarea">
+        <textarea name="content" value="{{content || ''}}" placeholder-style="color:#B3B8C0;" placeholder="感谢您的支持和爱护！请将您的意见告诉我们，让我们一起携手把心理测试做的更好！" bindinput="bindComtent" maxlength="500" auto-height auto-focus />
+        <view class="maxlength">({{num}}/500)</view>
+    </view>
+    <button class="btn" formType="submit">提交</button>
+</form>

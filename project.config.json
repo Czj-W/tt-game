@@ -66,6 +66,17 @@
 						"appId": "",
 						"extraData": ""
 					}
+				},
+				{
+					"id": 5,
+					"name": "意见反馈",
+					"pathName": "pages/user/suggest",
+					"query": "",
+					"scene": "011001",
+					"referrerInfo": {
+						"appId": "",
+						"extraData": ""
+					}
 				}
 			]
 		}

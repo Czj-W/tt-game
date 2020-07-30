@@ -9,11 +9,13 @@ Page({
     titleList: [],
     list: [],
     page: 1,
+    selectionLength:0
   },
   onLoad: function () {
     this.getCategoryList()
     this.getRandomTestList()
     this.getBanners()
+    this.getSelection()
   },
   getCategoryList() {
 		networkApi.category_v1.list().then((res) => {
@@ -36,7 +38,7 @@ Page({
         if (v.name === '职场') {
           v.url = base_url+'adx-work.png'
         }
-        this.geList(v.id)
+        // this.geList(v.id)
       })
       this.setData({
         classifyList
@@ -52,6 +54,26 @@ Page({
       console.log(res, '获取轮播图');
       this.setData({
         bannerList:res.data
+      })
+    }).catch(err => {
+      console.log(err,'err')
+    }).finally(() => {
+		});
+  },
+  getSelection() {
+		networkApi.quizzes_v1.selection().then((res) => {
+      console.log(res, '今日精选');
+      let selectionLength =0
+      if (res.data.length > 6) {
+        selectionLength = 3
+      } else if (res.data.length<=6&&res.data.length>3) {
+        selectionLength = 2
+      } else if (res.data.length <= 3 && res.data.length > 0) {
+        selectionLength = 1
+      }
+      this.setData({
+        selectionLength,
+        list:res.data
       })
     }).catch(err => {
       console.log(err,'err')

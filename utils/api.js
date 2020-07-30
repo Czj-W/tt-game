@@ -9,4 +9,5 @@ export default {
   category_v1: index.category_v1,
   quizzes_v1: topic.quizzes_v1,
   user_v1: user.user_v1,
+  feedback_v1:user.feedback_v1
 };
